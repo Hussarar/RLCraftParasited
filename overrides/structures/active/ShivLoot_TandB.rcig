@@ -34,7 +34,10 @@
           "nbt": {
             "Quality": {
               "nbtType": "compound",
-              "nbt": {}
+              "nbt": {
+                "nbtType": "string",
+                "primary": "xat:neutral"
+              }
             }
           }
         }
