@@ -139,7 +139,16 @@
       "item": {
         "id": "bountifulbaubles:amuletcross",
         "damage": 0,
-        "count": 1
+        "count": 1,
+        "tag": {
+          "nbtType": "compound",
+          "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            }
+          }
+        }
       }
     },
     {

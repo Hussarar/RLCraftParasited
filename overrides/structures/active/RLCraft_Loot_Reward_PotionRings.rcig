@@ -108,6 +108,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "potioncore:iron_skin"
@@ -127,6 +131,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "potioncore:diamond_skin"
@@ -146,6 +154,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "potioncore:archery"
@@ -165,6 +177,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "potioncore:reach"
@@ -184,6 +200,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "potioncore:magic_focus"
@@ -203,6 +223,10 @@
         "tag": {
           "nbtType": "compound",
           "nbt": {
+            "Quality": {
+              "nbtType": "compound",
+              "nbt": {}
+            },
             "effect": {
               "nbtType": "string",
               "nbt": "minecraft:health_boost"
