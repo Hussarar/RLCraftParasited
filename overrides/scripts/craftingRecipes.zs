@@ -1,6 +1,8 @@
 import crafttweaker.item.IItemStack;
 import dynamic.zenutils.config.Parasited;
 import crafttweaker.recipes.ICraftingInfo;
+import mods.betterendforge.Alloying;
+import mods.betterendforge.Infusion;
 
 print("Script starting!");
 
@@ -15,6 +17,8 @@ recipes.removeByRecipeName("minecraft:stone_brick_slab");
 recipes.removeByRecipeName("minecraft:stone_brick_stairs");
 
 recipes.removeByRecipeName("quark:purple_shulker_box");
+
+recipes.removeByRecipeName("realistictorches:matchbox_repair");
 
 recipes.remove(<variedcommodities:diamond_gun>);
 recipes.remove(<variedcommodities:emerald_gun>);
@@ -986,7 +990,7 @@ recipes.addShaped("rec90e",<locks:diamond_lock_pick>,
 recipes.addShaped("rec90f",<locks:dragonbone_lock_pick>*4,
  [[null,<iceandfire:dragonbone>,<iceandfire:dragonbone>],
   [null,<iceandfire:dragonbone>,null],
-  [<iceandfire:dragonbone>,null,null]]);
+  [<iceandfire:witherbone>,null,null]]);
 
 recipes.addShaped("rec92",<variedcommodities:lamp>,
  [[<contenttweaker:steel_nugget>,<variedcommodities:ingot_steel>,<contenttweaker:steel_nugget>],

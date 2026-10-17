@@ -53,12 +53,12 @@ zenClass BloodmoonHandlerMixin {
     #   cancellable: true
     #}
     function zenutils_disableBloodmoon(event as native.net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent, ci as mixin.CallbackInfo) as void {
+        if(!native.com.dhanantry.scapeandrunparasites.util.config.SRPConfigSystems.useEvolution) return; // for unparasited
         val world as World = event.world;
         val players as [EntityPlayer] = world.playerEntities;
         if(players.length == 0) return; # no players in dim, shouldnt happen
     
         for player in players {
-            val player as EntityPlayer = players[0];
             val phase as int = SRPSaveDataInterface.get(world, player, null).getEvolutionPhase(world.provider.getDimension()) as int;
             if(phase >= zenutils_cfg_val) return; // anyone above phase 2: bloodmoons allowed
         }
@@ -560,6 +560,33 @@ zenClass ItemSawMixin {
     #}
     function zenutils_makeRepairable(item as native.com.alcatrazescapee.notreepunching.common.items.ItemSaw, original as mixin.Operation) as Item {
         return this0;
+    }
+}
+
+// Post AnimalTameEvent when an Amphithere or Cockatrice is tamed, like vanilla and the Hippocampus do, so Tame quest tasks count them
+#mixin {targets: "com.github.alexthe666.iceandfire.entity.EntityAmphithere"}
+zenClass EntityAmphithereMixin {
+    #mixin WrapOperation
+    #{
+    #   method: "func_70636_d",
+    #   at: {value: "INVOKE", target: "Lcom/github/alexthe666/iceandfire/entity/EntityAmphithere;func_193101_c(Lnet/minecraft/entity/player/EntityPlayer;)V"}
+    #}
+    function zenutils_postTameEvent(amphithere as native.com.github.alexthe666.iceandfire.entity.EntityAmphithere, player as EntityPlayer, original as mixin.Operation) as void {
+        if(!native.net.minecraftforge.event.ForgeEventFactory.onAnimalTame(amphithere, player))
+            original.call(amphithere, player);
+    }
+}
+
+#mixin {targets: "com.github.alexthe666.iceandfire.entity.EntityCockatrice"}
+zenClass EntityCockatriceMixin {
+    #mixin WrapOperation
+    #{
+    #   method: "func_70636_d",
+    #   at: {value: "INVOKE", target: "Lcom/github/alexthe666/iceandfire/entity/EntityCockatrice;func_193101_c(Lnet/minecraft/entity/player/EntityPlayer;)V"}
+    #}
+    function zenutils_postTameEvent(cockatrice as native.com.github.alexthe666.iceandfire.entity.EntityCockatrice, player as EntityPlayer, original as mixin.Operation) as void {
+        if(!native.net.minecraftforge.event.ForgeEventFactory.onAnimalTame(cockatrice, player))
+            original.call(cockatrice, player);
     }
 }
 

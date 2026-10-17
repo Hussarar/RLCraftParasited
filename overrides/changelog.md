@@ -1,3 +1,34 @@
+--- Oct 3 2026 ---
+
+Another maintenance update, mainly this quick bc of crashy Dregora biomes
+
+Mods
+    Updated Luckified, now shows rolled lvls
+    Updated AAAM, now marks enchants on the clientside again
+    Updated NischiTweaker, now allows to add Distant Horizons
+
+Config
+    Added Reskillable Magic 16 requirement to pondering orb
+    Added villager chat line by ihaspopcorn "My father was a humble librarian, until one day he was buried underground by an adventurer. It was for safekeeping they said..."
+    Removed all hardcoded qualities on reccomplex loottables (ever found that worthless stone axe?)
+    Fixed Shivaxi Monument neutral dragon eye not working (hopefully)
+    Added inkwells to various loot pools and to villager trades
+    Hid various unused items in jei (thanks hussarar!)
+
+Scripts
+    Removed a lot of BetterEnd items (thanks hussarar!)
+    fixed i&f cocka+amphi not working on betterquesting tame quests (thanks fresh-Glitch!)
+
+Dregora
+    Updated DregoraRL to fix more crashy areas
+
+Configpacks
+    Added NoFlyZone, pushed by hussarar
+    HCC now also disallows stone+wooden scythes (ty hussarar)
+    Disabled LC phase lock in unparasited. apparently lots of things wrong with unparasited LC... is a todo
+
+Added version tag to released zips so its easier to see what is what. lets hope it works
+
 --- Sept 30 2026 ---
 
 Small maintenance update but also a nice little addition in enchantertools
